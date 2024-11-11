@@ -18,9 +18,6 @@ print("J’ai terminé l’Épreuve de la Terre et c’était interessant.")
 
 ### Note : 
 """
-XXmin pour faire cet exercice. 
-Principal difficulté: 
-- 
-Ce que j'ai appris : 
-- 
+10h pour faire les 16 exercices de la terre. 
+
 """
