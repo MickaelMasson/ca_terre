@@ -12,6 +12,34 @@ Non, 6 n’est pas un nombre premier.
 Attention : 0 et 1 ne sont pas des nombres premiers. Gérez les erreurs d’arguments.
 
 """
+import sys
+
+arguments = sys.argv[1:]
+
+if len(arguments) != 1 :
+    print("erreur, vous devez saisir un seul argument")
+    sys.exit()
+
+nombre = arguments[0]
+
+if not nombre.isdigit() :
+    print("Vous devez saisir un nombre entier positif")
+    sys.exit()
+
+nombre = int(nombre)
+
+if nombre < 2 :
+    print("0 et 1 ne sont pas des nombres premiers")
+    sys.exit()
+
+for divider in range(2, nombre):
+    if nombre % divider == 0 :
+        print(f"Non, {nombre} n'est pas un nombre premier")
+        sys.exit()
+
+print(f"Oui, {nombre} est un nombre premier.")
+
+"""
 argument = input()
 
 if int(argument) > 1 :
@@ -27,7 +55,7 @@ else :
 
 
 ### Note : 
-"""
+
 45min pour faire cet exercice. 
 Principal difficulté: 
 - dans range() ne pas commencer par la valeur 0 car erreur à la 
