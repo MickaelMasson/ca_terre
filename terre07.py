@@ -20,8 +20,39 @@ Fonctions interdites:
 -La fonction length
 -La fonction size
 """
+import sys
+
+arguments = sys.argv[1:]
+
+number_argument = 0
+
+for argument in arguments :
+    number_argument += 1
+
+if number_argument != 1 :
+    print("vous devez saisir une chaine de caractère")
+    sys.exit()
+
+argument = str(arguments[0])
+
+if argument.isdigit() :
+    print("vous devez saisir une chaine de caractère et non des entiers")
+    sys.exit()
+
+number_character = 0
+
+for character in argument :
+    number_character += 1
+    argument = argument[:-1]
+
+print(number_character)
 
 
+
+
+
+
+"""
 chaine = input()
 compteur_de_caractere = -2
 
@@ -39,7 +70,7 @@ else :
     
 
 ### Note : 
-"""
+
 45min pour faire cet exercice. 
 Principal difficulté: 
 - a cause d'une erreur de frappe, oublie du - dans [:-1], 
