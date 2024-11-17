@@ -12,7 +12,32 @@ Fonctions interdites:
 -La fonction sqrt
 
 """
+import sys
 
+arguments = sys.argv[1:]
+
+if len(arguments) != 1 :
+    print("erreur, vous devez saisir un entier")
+    sys.exit()
+
+nombre = arguments[0]
+
+if not nombre.isdigit() :
+    print("erreur, vous devez saisir un entier positif")
+    sys.exit()
+
+nombre = int(nombre)
+
+result = 0
+
+for square in range(1,nombre) :
+    if nombre >= square**2 :
+        result += 1
+    
+print(result)
+
+
+"""
 argument = input()
 
 if not argument.isdigit() :
@@ -30,7 +55,7 @@ else :
 
 
 ### Note : 
-"""
+
 40min pour faire cet exercice. 
 Principal difficulté: 
 - Je ne comprend pas pourquoi je suis obligé de mettre i-1 a la fin 
