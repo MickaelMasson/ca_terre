@@ -20,6 +20,29 @@ Attention : gérez aussi les entiers négatifs.
 
 Fonctions interdites: 
 -En Ruby: even? et odd?
+"""
+
+import sys
+
+arguments = sys.argv[1:]
+
+if len(arguments) != 1:
+    print("Tu ne me la mettras pas à l'envers.1")
+    sys.exit()
+
+argument = arguments[0]
+
+if not argument.lstrip("-").isdigit():
+    print("Tu ne me la mettras pas à l'envers.2")
+    sys.exit()
+
+entier = int(argument)
+
+if entier % 2 == 0 or entier % -2 == 0:
+    print("pair")
+else:
+    print("impair")
+
 
 """
 nombre = input()
@@ -35,7 +58,7 @@ try :
 except ValueError : 
     print("Tu ne me la mettras pas à l’envers.")
 
-"""
+
 ### Note : 
 
 1h45min pour faire cet exercice. 
