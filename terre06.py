@@ -17,6 +17,28 @@ Fonctions interdites:
 -La fonction reverse
 """
 
+import sys
+
+arguments = sys.argv[1:]
+
+if len(arguments) < 1 :
+    print("erreur, vous devez saisir au moins 1 arguments")
+    sys.exit()
+
+argument = " ".join(arguments)
+
+reverse_arguments = []
+
+for character in range(len(argument)) :
+    last_character = argument[-1]
+    reverse_arguments.append(last_character)
+    argument = argument[:-1]
+
+reverse_argument = "".join(reverse_arguments)
+
+print(reverse_argument)
+
+"""
 mots = input()
 liste_lettre = []
 
@@ -30,7 +52,7 @@ print(mots_a_l_envers)
 
 
 ### Note : 
-"""
+
 20min pour faire cet exercice. 
 Principal difficulté: 
 - j'avais oublié les : dans mots = mots[:-1], 
