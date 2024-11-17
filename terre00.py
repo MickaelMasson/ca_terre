@@ -9,6 +9,18 @@ $>
 
 Attention : votre programme devra utiliser une boucle."""
 
+alphabet_list = []
+
+#97 Valeur décimal de "a", 122 Valeur décimal de "z" 
+for letter in range(97, 123):
+    alphabet_list.append(chr(letter))
+
+print("".join(alphabet_list))
+
+
+
+"""
+Première version de mon exercice vu par Romain le 14 11 24
 
 liste_alphabet = []
 lettre = "a"
@@ -20,9 +32,8 @@ alphabet = "".join(liste_alphabet)
 print(alphabet + "\n")
 
 
-
 ### Note : 
-"""
+
 50min pour faire cet exercice. 
 Principal difficulté: 
 - comment incrémenter les lettres de l'alphabet.
