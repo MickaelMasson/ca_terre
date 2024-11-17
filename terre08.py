@@ -14,6 +14,38 @@ Fonctions interdites:
 -La fonction pow
 
 """
+import sys
+
+arguments = sys.argv[1:]
+
+if len(arguments) != 2 :
+    print("Vous devez saisir deux arguments")
+    sys.exit()
+
+base_number = arguments[0]
+
+exponent = arguments[1]
+
+if not base_number.lstrip("-").isdigit() :
+    print("Votre nombre de base doit etre un entier")
+    sys.exit()
+
+base_number = int(base_number)
+
+if not exponent.isdigit() :
+    print("L'exposant doit etre un entier positif")
+    sys.exit()
+
+exponent = int(exponent)
+
+result = base_number
+
+for times in range(exponent - 1) :
+    result = result * base_number
+
+print(result)
+
+"""
 try :
     arguments = input()
     liste_arguments = arguments.split(" ")
@@ -33,7 +65,7 @@ except :
 
 
 ### Note : 
-"""
+
 40min pour faire cet exercice. 
 Principal difficulté: 
 - gestion des erreur et erreur bete de x^0 = x
