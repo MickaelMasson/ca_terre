@@ -15,10 +15,46 @@ $> python exo.py 3 5
 erreur.
 
 """
-arguments = input()
-liste_arguments = arguments.split(" ")
-premier_argument = int(liste_arguments[0])
-deuxieme_argument = int(liste_arguments[1])
+
+import sys
+
+arguments = sys.argv[1:]
+
+if len(arguments) != 2 :
+    print("erreur, vous devez saisir deux arguments")
+    sys.exit()
+
+for argument in arguments :
+    if not argument.isdigit() :
+        print("erreur, vos argmuents doivent être des entiers positif")
+        sys.exit()
+
+dividend = int(arguments[0])
+divider = int(arguments[1])
+
+if divider == 0 :
+    print("erreur, il est imposible de diviser par zéro")
+    sys.exit()
+
+if dividend < divider:
+    print("erreur, le diviseur ne peut pas est supérieur au dividende")
+    sys.exit()
+
+float_result = dividend / divider
+
+str_result = str(float_result)
+
+point_index = str_result.find(".")
+
+result = str_result[0:point_index]
+rest = dividend % divider
+
+print(f"resultat: {result}")
+print(f"reste: {rest}")
+
+"""
+premier_argument = int(arguments[0])
+deuxieme_argument = int(arguments[1])
 
 if premier_argument > deuxieme_argument and deuxieme_argument != 0:
     print(f"résultat: {int((premier_argument / deuxieme_argument))}")
@@ -29,7 +65,7 @@ else :
 
 
 ### Note : 
-"""
+
 20min pour faire cet exercice. 
 Principal difficulté: 
 - l'arrondi de la division, j'ai trouvé floor() 
