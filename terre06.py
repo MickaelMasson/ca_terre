@@ -26,12 +26,13 @@ if len(arguments) != 1 :
     sys.exit()
 
 argument = arguments[0]
+reversed_argument = ""
 
-for i in argument[::-1] :
-    reverse_argument = ""
-    reverse_argument = argument[:-1]
+for i in range(len(argument) -1, -1, -1) :
+    reversed_argument += argument[i]
+    #print(i)
 
-print(reverse_argument)
+print(reversed_argument)
 
 """
 mots = input()
