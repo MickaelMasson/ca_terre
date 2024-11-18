@@ -21,20 +21,15 @@ import sys
 
 arguments = sys.argv[1:]
 
-if len(arguments) < 1 :
+if len(arguments) != 1 :
     print("erreur, vous devez saisir au moins 1 arguments")
     sys.exit()
 
-argument = " ".join(arguments)
+argument = arguments[0]
 
-reverse_arguments = []
-
-for character in range(len(argument)) :
-    last_character = argument[-1]
-    reverse_arguments.append(last_character)
-    argument = argument[:-1]
-
-reverse_argument = "".join(reverse_arguments)
+for i in argument[::-1] :
+    reverse_argument = ""
+    reverse_argument = argument[:-1]
 
 print(reverse_argument)
 
