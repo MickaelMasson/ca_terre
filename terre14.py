@@ -16,8 +16,36 @@ Fonctions interdites:
 -La fonction sort
 """
 
-arguments = input()
-liste_arguments = arguments.split(" ")
+import sys
+
+arguments = sys.argv[1:]
+
+if len(arguments) < 2 :
+    print("Vous devez saisir au moins 2 arguments")
+    sys.exit()
+
+for argument in arguments :
+    if not argument.isdigit() :
+        print("erreur")
+        sys.exit()
+
+for number in range(len(arguments) - 1) :
+    if not int(arguments[number]) < int(arguments[(number + 1)]) :
+        print("Pas triée !")
+        sys.exit()
+    number += 1
+
+print("Triée !")
+
+maman = "there"
+papa = "umarcel"
+
+if maman > papa :
+    print("essai")
+
+
+"""
+
 if arguments.replace(" ", "").isdigit() :
     i = 0
     for i in range(len(liste_arguments) - 1) : 
@@ -32,7 +60,7 @@ else :
 
 
 ### Note : 
-"""
+
 1h50 pour faire cet exercice. 
 Principal difficulté: 
 - comment diférencier des chiffres avec des espaces et 
