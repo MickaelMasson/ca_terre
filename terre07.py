@@ -26,7 +26,7 @@ arguments = sys.argv[1:]
 
 number_argument = 0
 
-for argument in arguments :
+for i in arguments :
     number_argument += 1
 
 if number_argument != 1 :
@@ -41,9 +41,8 @@ if argument.isdigit() :
 
 number_character = 0
 
-for character in argument :
+for i in argument :
     number_character += 1
-    argument = argument[:-1]
 
 print(number_character)
 
