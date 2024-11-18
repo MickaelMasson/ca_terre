@@ -13,6 +13,41 @@ $> ruby exo.rb 2 2 2
 erreur.
 
 """
+import sys
+
+arguments = sys.argv[1:]
+
+if len(arguments) != 3 :
+    print("erreur vous devez saisir 3 arguments")
+    sys.exit()
+
+for argument in arguments :
+    if not argument.isdigit():
+        print("erreur, vos arguments doivent être des entiers positif")
+
+first_number = int(arguments[0])
+second_number = int(arguments[1])
+third_number = int(arguments[2])
+
+if (first_number == second_number or 
+    first_number == third_number or 
+    second_number == third_number ) :
+    print("erreur, vos valeurs ne peuvent être égale")
+    sys.exit()
+
+if (second_number < first_number < third_number or
+    third_number < first_number < second_number) : 
+    print(first_number)
+    sys.exit()
+elif (first_number < second_number < third_number or
+      third_number < second_number < first_number) :
+    print(second_number)
+    sys.exit()
+else :
+    print(third_number)
+
+
+"""
 arguments = input()
 
 liste_arguments = arguments.split(" ")
@@ -35,7 +70,7 @@ if ((int(troisieme_argument) > int(deuxieme_argument) and int(troisieme_argument
 
 
 ### Note : 
-"""
+
 15min pour faire cet exercice. 
 Principal difficulté: 
 - 
