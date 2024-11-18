@@ -30,6 +30,7 @@ for argument in arguments :
         sys.exit()
 
 dividend = int(arguments[0])
+
 divider = int(arguments[1])
 
 if divider == 0 :
@@ -47,6 +48,7 @@ str_result = str(float_result)
 point_index = str_result.find(".")
 
 result = str_result[0:point_index]
+
 rest = dividend % divider
 
 print(f"resultat: {result}")
