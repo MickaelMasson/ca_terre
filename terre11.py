@@ -72,31 +72,3 @@ if hour >= 12 :
         hour = hour - 12
         print(f"{hour}:{minute}PM")
         sys.exit()
-
-"""
-heure24 = input()
-period = heure24.split(":")
-heure = period[0]
-minute = period[1]
-
-if heure24 == "00:00" :
-    print("12:00AM")
-elif heure24 == "12:00" :
-    print("12:00PM")
-elif heure == "00" :
-    print(f"12:{minute}AM")
-elif int(heure) > 0 and int(heure) < 12 :
-    print(f"{heure}:{minute}AM")
-elif heure == "12" :
-    print(f"12:{minute}PM")
-elif int(heure) > 12 and int(heure) < 24 :
-    print(f"{(int(heure) - 12)}:{minute}PM")
-
-### Note : 
-
-25min pour faire cet exercice. 
-Principal difficulté: 
-- 
-Ce que j'ai appris : 
-- 
-"""
