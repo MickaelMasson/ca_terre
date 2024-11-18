@@ -1,4 +1,4 @@
-# Racine carrée d’un nombre
+# Racine carrée d’un number
 """
 Créez un programme qui affiche la racine carrée d’un entier positif.
 
@@ -20,46 +20,18 @@ if len(arguments) != 1 :
     print("erreur, vous devez saisir un entier")
     sys.exit()
 
-nombre = arguments[0]
+argument = arguments[0]
 
-if not nombre.isdigit() :
+if not argument.isdigit() :
     print("erreur, vous devez saisir un entier positif")
     sys.exit()
 
-nombre = int(nombre)
+number = int(argument)
 
 result = 0
 
-for square in range(1,nombre) :
-    if nombre >= square**2 :
+for i in range(1,number) :
+    if number >= i**2 :
         result += 1
     
 print(result)
-
-
-"""
-argument = input()
-
-if not argument.isdigit() :
-    print("erreur.")
-elif int(argument) < 0 :
-    print("ça doit etre un entier positif")
-else :
-    i = 1
-    while int(i)**2 < int(argument):
-        i += 1
-    if int(i)**2 == int(argument) :
-        print(i)
-    else :
-        print(f"Ce résultat est arrondi à l'inférieur : {(i - 1)} ")
-
-
-### Note : 
-
-40min pour faire cet exercice. 
-Principal difficulté: 
-- Je ne comprend pas pourquoi je suis obligé de mettre i-1 a la fin 
-  alors que dans la boucle j'ai bien mit strictement inférieur
-Ce que j'ai appris : 
-- le carré d'un nombre se fait avec **2 (puissance 2)
-"""
