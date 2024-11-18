@@ -33,27 +33,3 @@ for i in range(len(argument) -1, -1, -1) :
     #print(i)
 
 print(reversed_argument)
-
-"""
-mots = input()
-liste_lettre = []
-
-while len(mots) > 0 :
-    derniere_lettre = mots[-1]
-    liste_lettre.append(derniere_lettre)
-    mots = mots[:-1]
-
-mots_a_l_envers = "".join(liste_lettre)
-print(mots_a_l_envers)
-
-
-### Note : 
-
-20min pour faire cet exercice. 
-Principal difficulté: 
-- j'avais oublié les : dans mots = mots[:-1], 
-  du coup ça n'enlevais pas la dernière lettre 
-  et faisait une boucle infini.
-Ce que j'ai appris : 
-- la différence entre [-1] et [:-1]
-"""
