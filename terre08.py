@@ -22,15 +22,15 @@ if len(arguments) != 2 :
     print("Vous devez saisir deux arguments")
     sys.exit()
 
-base_number = arguments[0]
+base = arguments[0]
 
 exponent = arguments[1]
 
-if not base_number.lstrip("-").isdigit() :
+if not base.lstrip("-").isdigit() :
     print("Votre nombre de base doit etre un entier")
     sys.exit()
 
-base_number = int(base_number)
+base = int(base)
 
 if not exponent.isdigit() :
     print("L'exposant doit etre un entier positif")
@@ -38,37 +38,9 @@ if not exponent.isdigit() :
 
 exponent = int(exponent)
 
-result = base_number
+result = base
 
-for times in range(exponent - 1) :
-    result = result * base_number
+for i in range(exponent - 1) :
+    result = result * base
 
 print(result)
-
-"""
-try :
-    arguments = input()
-    liste_arguments = arguments.split(" ")
-    premier_argument = int(liste_arguments[0])
-    deuxieme_argument = int(liste_arguments[1])
-    resultat = premier_argument
-
-    if deuxieme_argument == 0 :        
-        print(resultat)
-    
-    for i in range(int(deuxieme_argument - 1)) :
-        resultat = resultat * premier_argument
-    print(resultat)
-       
-except :
-    print("erreur.")
-
-
-### Note : 
-
-40min pour faire cet exercice. 
-Principal difficulté: 
-- gestion des erreur et erreur bete de x^0 = x
-Ce que j'ai appris : 
-- la gestion de TOUTES les erreurs avec juste try et except
-"""
