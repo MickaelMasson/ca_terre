@@ -32,7 +32,7 @@ hour = argument[0:colon_index]
 minute = argument[colon_index + 1 : colon_index + 3]
 period = (argument[colon_index + 3 : colon_index + 5]).upper()
 
-print(period)
+#print(period)
 
 if period == "AM" :
     if hour == "12" :

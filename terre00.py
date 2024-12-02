@@ -15,6 +15,8 @@ alphabet_list = []
 for letter in range(97, 123):
     alphabet_list.append(chr(letter))
 
+alphabet_list.append("\n")
+
 print("".join(alphabet_list))
 
 
@@ -29,7 +31,7 @@ for i in range(26) :
     liste_alphabet.append(chr(ord(lettre) + i))
 
 alphabet = "".join(liste_alphabet)
-print(alphabet + "\n")
+print(alphabet + "\\n")
 
 
 ### Note : 
@@ -40,5 +42,5 @@ Principal difficulté:
 Ce que j'ai appris : 
 - ord() pour récupérer le code le la lettre
 - chr() converti le code de la lettre en lettre
-- "\n" pour un retour à la ligne
+- "\\n" pour un retour à la ligne
 """

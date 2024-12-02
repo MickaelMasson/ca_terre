@@ -12,13 +12,13 @@ solide
 
 import sys
 
-print(sys.argv) #['/home/mickael/Documents/github/ca_terre/terre02.py', 'je', 'suis', 'un']
+"""print(sys.argv) #['/home/mickael/Documents/github/ca_terre/terre02.py', 'je', 'suis', 'un']
 print(sys.argv[1:]) #['je', 'suis', 'un']
 print(sys.argv[:1]) #['/home/mickael/Documents/github/ca_terre/terre02.py']
 print(sys.argv[-1:]) #['un']
 print(sys.argv[:-1]) #['/home/mickael/Documents/github/ca_terre/terre02.py', 'je', 'suis']
 print(sys.argv[1::2]) #['je', 'un']
-print(sys.argv[0]) #/home/mickael/Documents/github/ca_terre/terre02.py
+print(sys.argv[0]) #/home/mickael/Documents/github/ca_terre/terre02.py"""
 
 
 if len(sys.argv) > 1:

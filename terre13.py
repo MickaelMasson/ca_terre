@@ -24,6 +24,7 @@ if len(arguments) != 3 :
 for argument in arguments :
     if not argument.isdigit():
         print("erreur, vos arguments doivent être des entiers positif")
+        sys.exit()
 
 first_number = int(arguments[0])
 second_number = int(arguments[1])

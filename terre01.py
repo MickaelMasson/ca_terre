@@ -21,7 +21,7 @@ file_name = path_array[-1]
 print(file_name)
 
 #la même chose sur une ligne.
-print((sys.argv[0]).split("/")[-1])
+#print((sys.argv[0]).split("/")[-1])
 
 
 """
